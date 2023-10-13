@@ -20,11 +20,11 @@ public class Portero extends Futbolista {
 	}
 	
 	public int compareTo(Object o) {
-		
-		if (this.golesRecibidos > o.golesRecibidos) {
-			return this.golesRecibidos - o.golesRecibidos;
-		} else if (this.golesRecibidos < o.golesRecibidos) {
-			return o.golesRecibidos - f.golesRecibidos;
+		Portero p = (Portero)o;
+		if (this.golesRecibidos > p.golesRecibidos) {
+			return this.golesRecibidos - p.golesRecibidos;
+		} else if (this.golesRecibidos < p.golesRecibidos) {
+			return p.golesRecibidos - this.golesRecibidos;
 		} else {
 			return 0;
 		}

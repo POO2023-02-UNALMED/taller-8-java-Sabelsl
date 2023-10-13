@@ -51,10 +51,11 @@ public abstract class Futbolista implements Comparable<Object>{
 	}
 	
 	public int compareTo(Object o) {
-	    if (this.getEdad() != o.getEdad()) {
-	        return this.getEdad() - o.getEdad();
+		Futbolista f = (Futbolista)o;
+	    if (this.getEdad() != f.getEdad()) {
+	        return this.getEdad() - f.getEdad();
 	    }
-	    return this.getNombre().compareTo(o.getNombre());
+	    return this.getNombre().compareTo(f.getNombre());
 	}
 
 }
